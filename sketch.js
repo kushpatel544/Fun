@@ -33,7 +33,7 @@ function draw() {
   for ( let i = 0; i < columns;i++) {
     for ( let j = 0; j < rows;j++) {
       if ((board[i][j] == 1)){
-        fill(255);
+        fill(178, 255, 36);
       }
       else fill(0);
       stroke(50);
@@ -89,8 +89,8 @@ function generate() {
     mx=floor(mouseX/w)
     my=floor(mouseY/w)
     next[mx][my]=1
-   
   }
+  
   let temp = board;
   board = next;
   next = temp;
