@@ -4,6 +4,8 @@ let columns;
 let rows;
 let board;
 let next;
+let mx;
+let my;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -45,9 +47,7 @@ function draw() {
 function keyPressed(){
     init();
 }
-function mousePressed() {
-  init();
-}
+
 
 
 function init() {
@@ -85,7 +85,12 @@ function generate() {
       else                                             next[x][y] = board[x][y]; // Stasis
     }
   }
-
+  if(mouseIsPressed===true){
+    mx=floor(mouseX/w)
+    my=floor(mouseY/w)
+    next[mx][my]=1
+   
+  }
   let temp = board;
   board = next;
   next = temp;
