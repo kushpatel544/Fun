@@ -6,7 +6,7 @@ let board;
 let next;
 
 function setup() {
-  createCanvas(800,720);
+  createCanvas(800,800);
   w = 20;
 
   columns = floor(width / w);
