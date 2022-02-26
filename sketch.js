@@ -7,7 +7,7 @@ let next;
 
 function setup() {
   createCanvas(800,720);
-  w = 20;
+  w = 10;
 
   columns = floor(width / w);
   rows = floor(height / w);
